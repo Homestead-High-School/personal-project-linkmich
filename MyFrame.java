@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class MyFrame extends JFrame implements KeyListener, MouseListener{
+public class MyFrame extends JFrame{ //implements KeyListener, MouseListener{
 
     JLabel label;
     ImageIcon icon;
@@ -15,15 +15,15 @@ public class MyFrame extends JFrame implements KeyListener, MouseListener{
         this.add(panel);
         this.pack();
         this.setLocationRelativeTo(null);
-        this.addKeyListener(this);
+        //this.addKeyListener(this);
         
         icon = new ImageIcon("Tetris.ppng.png");
 
         label = new JLabel();
         label.setBounds(0,0,100,100);
-        label.setBackground(Color.blue);
+        label.setBackground(Color.white);
         label.setOpaque(true);
-        this.addMouseListener(this);
+        //this.addMouseListener(this);
         //label.setIcon(icon);
         //label.setBackground(Color.red);
         //label.setOpaque(true);
@@ -36,7 +36,7 @@ public class MyFrame extends JFrame implements KeyListener, MouseListener{
 
     }
 
-
+    /*
     @Override
     public void keyPressed(KeyEvent e) {
         switch(e.getKeyChar()) {
@@ -97,4 +97,5 @@ public class MyFrame extends JFrame implements KeyListener, MouseListener{
     public void mouseReleased(MouseEvent e) {
         label.setBackground(Color.green);        
     }
+    */
 }
